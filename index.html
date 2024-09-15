@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Album Covers of All Time</title>
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            text-align: center;
+            color: #333;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+        }
+        header h1 {
+            font-weight: 300;
+            margin: 0;
+        }
+        header h2 {
+            font-weight: 100;
+            font-size: 1.2em;
+            color: #ddd;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .album {
+            perspective: 1000px;
+        }
+        .album-inner {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%; 
+            transition: transform 0.6s ease-in-out;
+            transform-style: preserve-3d;
+        }
+        .album:hover .album-inner {
+            transform: rotateY(180deg);
+        }
+        .album-front, .album-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .album-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .album-back {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 6px;
+            transform: rotateY(180deg);
+        }
+        .album-back p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        .album-back p strong {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            text-align: left;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h3 {
+            font-weight: 300;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            display: block;
+            font-weight: 300;
+            margin-bottom: 5px;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #444;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 15px 0;
+            font-size: 0.9em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Best Album Covers of All Time</h1>
+        <h2>Honouring the Visual Music Experience</h2>
+    </header>
+
+    <div class="container">
+        <div class="album">
+            <div class="album-inner">
+                <div class="album-front">
+                    <img src="Album Covers/PINK FLOYD.jpg" alt="Wish You Were Here">
+                </div>
+                <div class="album-back">
+                    <p><strong>Wish You Were Here</strong> by Pink Floyd (1975)<br>Designed by Hipgnosis (Storm Thorgerson and Aubrey Powell)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="album">
+            <div class="album-inner">
+                <div class="album-front">
+                    <img src="Album Covers/RATM.jpg" alt="Rage Against the Machine">
+                </div>
+                <div class="album-back">
+                    <p><strong>Rage Against the Machine (Self-titled)</strong> by Rage Against the Machine (1992)<br>Designed by John Yates</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="album">
+            <div class="album-inner">
+                <div class="album-front">
+                    <img src="Album Covers/King-Krimson.jpg" alt="In the Court of the Crimson King">
+                </div>
+                <div class="album-back">
+                    <p><strong>In the Court of the Crimson King</strong> by King Crimson (1969)<br>Designed by Barry Godber</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="album">
+            <div class="album-inner">
+                <div class="album-front">
+                    <img src="Album Covers/Kid-A.jpg" alt="Kid A">
+                </div>
+                <div class="album-back">
+                    <p><strong>Kid A</strong> by Radiohead (2000)<br>Designed by Stanley Donwood</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="album">
+            <div class="album-inner">
+                <div class="album-front">
+                    <img src="Album Covers/Massive-Attack.jpg" alt="Mezzanine">
+                </div>
+                <div class="album-back">
+                    <p><strong>Mezzanine</strong> by Massive Attack (1998)<br>Designed by Tom Hingston Studio</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="album">
+            <div class="album-inner">
+                <div class="album-front">
+                    <img src="Album Covers/WUTANG.jpg" alt="36 Chambers">
+                </div>
+                <div class="album-back">
+                    <p><strong>Enter the Wu-Tang (36 Chambers)</strong> by Wu-Tang Clan (1993)<br>Designed by Daniel Hastings</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="album">
+            <div class="album-inner">
+                <div class="album-front">
+                    <img src="Album Covers/YE.jpg" alt="Graduation">
+                </div>
+                <div class="album-back">
+                    <p><strong>Graduation</strong> by Kanye West (2007)<br>Designed by Takashi Murakami</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="album">
+            <div class="album-inner">
+                <div class="album-front">
+                    <img src="Album Covers/OUTKAST.jpg" alt="Stankonia">
+                </div>
+                <div class="album-back">
+                    <p><strong>Stankonia</strong> by OutKast (2000)<br>Designed by Gregory Burke</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h3>Suggestions?</h3>
+        <form action="mailto:your_email@example.com" method="post" enctype="text/plain">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="suggestions">Album Suggestions:</label>
+            <input type="text" id="suggestions" name="suggestions" placeholder="Your album suggestions">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CEREBRALGORETEX. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
